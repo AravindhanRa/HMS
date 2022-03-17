@@ -1,0 +1,26 @@
+@model List<HMS.Models.Patient>
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Blood Group</th>
+        <th>Age</th>
+        <th>Consulting Doctors</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>@item.PatientName</td>
+            <td>@item.PatientGender</td>
+            <td>@item.PatientBloodGroup</td>
+            <td>@item.PatientAge</td>
+            <td>@item.AttendantName</td>
+            </tr>
+        }
+    </tbody>
+</table>
